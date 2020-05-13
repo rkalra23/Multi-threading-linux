@@ -1,0 +1,29 @@
+The Doctors office problem is as follows:
+
+We have a hypothetical doctor's office where all the doctors are sleepy. Each doctor 
+has his own exam room. Each doctor will treat a patient, dismiss them then go to the 
+waiting room to see if there are more patients waiting. If there are, he brings one
+to his exam room and treats them. If there are no more patients he returns to his
+exam room and naps.
+
+Upon the arrival of a patient they will look to see if there is an available doctor (is one sleeping).
+If the doctor is sleeping, then patient must wake them up and get treated. If the doctors are busy then
+the patient will go to the waiting room and wait if there is a free waiting room chair. If there is no
+room for them to wait they will leave.
+
+Each doctor will be represented by a "doctors thread" and each patient will be represented by a
+"patient thread". Each doctor will treat a patient for 4 to 8 seconds, and patients will arrive 
+at the office between every 1 to 5 seconds. You must ensure there is synchronization between the 
+doctors and patients to ensure doctors are not trying to treat the same patient, that doctors
+aren't sleeping when patients need to be seen and that each doctor shares the work not just one doctor treating all
+patients. You should also ensure that patients are seen on a first come first served basis (FIFO).
+
+The amount of doctors, total patients and number of waiting room chairs will be specified through
+command line option so be sure your solution can handle different ratios of doctors, patients and chairs.
+
+Please include log messages to track the activity of your doctor's office.
+
+You should likely be able to write code that will compile without problem on any
+standard unix system with a POSIX interface (ie Linux) but as I indicated, compilation
+is not as important as the data structure design and how the doctors and patients are
+synchronized with one another.
